@@ -1,0 +1,349 @@
+body,
+html {
+    background-color: #90e0ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    width: 100%;
+}
+
+.sidebar-left,
+.channels,
+.chat,
+.replies {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-left {
+    background-color: #001d3d;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar-right {
+    background-color: #66CCCC;
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.profile button {
+    background-color: #90e0ef;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.channels {
+    background-color: #00719c;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+
+.channel-list {
+    list-style: none;
+    padding: 0;
+}
+
+.channel-list li {
+    margin-bottom: 10px;
+}
+
+.channel-list li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.channel-list li a:hover {
+    background-color: #ADEAEA;
+    color: #000;
+}
+
+.channels input {
+    display: block;
+    height: 40px;
+    width: 100%;
+    border-radius: 3px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.new-channel-form {
+    margin-top: 20px;
+}
+
+.chat {
+    background-color: #90e0ef;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.chat-button {
+    background-color: #001d3d;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.back-button {
+    background-color: #001d3d;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #E3FEF7;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.message .user {
+    font-weight: bold;
+    color: #333;
+}
+
+.message ul {
+    list-style: none;
+}
+
+.reply-form {
+    margin-top: 10px;
+}
+
+.message-form {
+    margin-top: 20px;
+}
+
+.message-input {
+    width: calc(100% - 80px);
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.chat input {
+    display: block;
+    height: 40px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.message-form button {
+    background-color: #001d3d;
+    color: #fff;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reactions {
+    margin-top: 10px;
+}
+
+.reaction-button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.replies {
+    background-color: #caf0f8;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.replies input {
+    display: block;
+    height: 40px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.reply-form {
+    margin-top: 10px;
+}
+
+.channels .highlighted a {
+    background-color: #001d3d;
+}
+
+.reaction-button {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.reaction-button:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+
+.login-form * {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.login-form h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.login-form input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.login-form button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #080710;
+    color: #e5e5e5;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form p {
+    text-align: center;
+}
+
+.login-form a {
+    color: blue;
+}
+
+.prof {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+
+.prof * {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.prof h1 {
+    text-align: center;
+}
+
+.prof button {
+    background-color: #001d3d;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.prof input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 3px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.message-content img {
+    max-width: 100%; /* Make sure images don't exceed the width of their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline images from affecting the text flow */
+    margin-top: 5px; /* Optional: Add some space between images and text */
+}
